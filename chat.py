@@ -9,12 +9,13 @@ def read_file(filename):
 
 def convert(Line):
     new=[]
+    person = None # 如果首次讀入的不是預設的人名，則不將對話存入
     for line in Line:
         if line in ['Allen','Tom']:
             person = line
             continue
-        new.append(person + ': ' + line)
-    #print(Line)
+        if person: # 如果有讀取到人名 就開始寫入到list
+            new.append(person + ': ' + line)
     return new
 
 def write_file(filename,Line):
