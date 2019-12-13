@@ -28,4 +28,6 @@ def main():
     lines = convert(lines)
     write_file('output.txt', lines)
 
-main()
+if __name__ == '__main__':
+	main()
+
